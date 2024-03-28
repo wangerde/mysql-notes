@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange April</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="intro-container">
+        <h2 class="title">Orange April</h2>
+        <img class="logo-white" src="./orange-april-white.png" />
+        <div class="intro-p">Discover the future of restaurant management with Orange April, where cutting-edge AI meets culinary excellence. </div>
+
+        <div class="question">The future is calling, are you ready to answer?</div>
+        <h6><%= Date() %></h6>
+        <ul>
+            <% for(var i=0; i<numberOfIterations; i++) { %>
+                <li>
+                    <%= i %>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+</body>
+</html>

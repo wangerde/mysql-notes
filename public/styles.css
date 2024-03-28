@@ -1,0 +1,61 @@
+body {
+    background-color: #ff7400;
+    margin: 10rem;
+}
+
+.intro-container {
+    color: white;
+    font-size: 2rem;
+}
+.logo-white {
+    margin: 2rem auto;
+    display: block;
+    width: 20%;
+}
+.title {
+    text-align: center;
+}
+.question {
+    font-size: 3.5rem;
+    margin-top: 1rem;
+}
+
+.intro-p {
+    margin-bottom: 1rem;
+}
+
+.email {
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .logo-white {
+        margin: 1rem auto;
+        display: block;
+        width: 30%;
+    }
+    .intro-container {
+        color: white;
+        margin: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .question {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    .email {
+        font-size: 1rem;
+    }
+}
