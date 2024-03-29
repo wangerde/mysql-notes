@@ -12,5 +12,9 @@
     <div><%= new Date(note.timestamp) %></div>
 
     <a href="/notes">Back</a>
+
+    <form action="/notes/<%= note.id %>/delete" method="post">
+        <button type="submit">Delete Note</button>
+    </form>
 </body>
 </html>

@@ -8,6 +8,13 @@
 </head>
 <body>
     <h1>Notes</h1>
+
+    <form action="/notes" method="GET">
+        <label for="searchInput">Search:</label>
+        <input type="text" name="searchTerm" id="searchInput">
+        <button>Search</button>
+    </form>
+
     <ul>
         <% notes.map(note => { %>
             <li>
@@ -18,5 +25,7 @@
             </li>
         <% }) %>
     </ul>
+
+    <a href="/createNote">Create New Note</a>
 </body>
 </html>

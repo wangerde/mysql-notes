@@ -1,4 +1,4 @@
-const notes = [
+let notes = [
     {   
         id: 1,
         title: "My First Note",
@@ -19,8 +19,12 @@ const notes = [
     }
 ]
 
-function getNotes() {
-    return notes
+function getNotes(searchTerm) {
+    if(!searchTerm) {
+        return notes
+    } else {
+        return notes.filter(note => note.title.includes(searchTerm) || note.contents.includes(searchTerm))
+    }
 }
 exports.getNotes = getNotes
 
@@ -39,6 +43,6 @@ function addNote(note) {
 exports.addNote = addNote
 
 function deleteNote(id) {
-    
+    notes = notes.filter((note) => note.id !== id)
 }
 exports.deleteNote = deleteNote

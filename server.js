@@ -13,7 +13,8 @@ app.get('/', (req, res) => {
 })
 
 app.get("/notes", (req, res) => {
-    const notes = database.getNotes()
+    const searchTerm = req.query.searchTerm
+    const notes = database.getNotes(searchTerm)
     res.render('notes.ejs', {
         notes,
     })
@@ -38,6 +39,12 @@ app.get("/createNote", (req, res) => {
 app.post("/notes", (req, res) => {
     const data = req.body
     database.addNote(data)
+    res.redirect('/notes')
+})
+
+app.post("/notes/:id/delete", (req, res) => {
+    const id = +req.params.id;
+    database.deleteNote(id)
     res.redirect('/notes')
 })
 
