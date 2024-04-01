@@ -35,5 +35,5 @@ export async function createNote(title, contents) {
     return getNote(id);
 }
 
-const result = await createNote('test', 'test')
-console.log(result)
+// const result = await createNote('mock from editor', 'testing vs code editor')
+// console.log(result)
